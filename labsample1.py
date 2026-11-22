@@ -15,11 +15,10 @@ import csv
 ##########################################################
 def get_longest_workout(workouts):
     longest = None
-
-    # Add your implementation from here
-    #HINT: Loop through workouts and compare durations
-
-
+    for x in workouts:
+        if longest is None or x['duration'] > longest['duration']:
+            longest = x
+            
     return longest
 
 ##################################################################
