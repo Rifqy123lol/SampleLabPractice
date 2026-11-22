@@ -18,7 +18,7 @@ def get_longest_workout(workouts):
     for x in workouts:
         if longest is None or x['duration'] > longest['duration']:
             longest = x
-            
+
     return longest
 
 ##################################################################
@@ -32,10 +32,8 @@ def get_longest_workout(workouts):
 def calc_total_duration(workouts):
     total = 0
 
-    # Add your implementation from here
-    #HINT: start with this code: for workout in workouts:
-
-
+    for x in workouts:
+        total += x['duration']
     return total
 
 ##################################################################
@@ -47,10 +45,9 @@ def calc_total_duration(workouts):
 #    average: Calculated average duration                        #
 ##################################################################
 def calc_average_duration(workouts):
-    average = 0
-
-    # Add your implementation from here
-    #HINT: Use calc_total_duration(workouts) and len(workouts)
+    average = 0 
+    if len(workouts) > 0:
+        average = calc_total_duration(workouts)/len(workouts)
 
 
     return average
